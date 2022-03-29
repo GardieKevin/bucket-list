@@ -9,8 +9,10 @@
 </head>
 <body class="body">
 {% include('fragments/header.html.twig') %}
-{% include('main/barre-navigation.html.twig') %}
+{% include('fragments/barre-navigation.html.twig') %}
 {% block contenu_accueil %}{% endblock %}
+{% block contenu_about_us %}{% endblock %}
+{% block contenu_list %}{% endblock %}
 {% include ('fragments/footer.html.twig') %}
 </body>
 </html>
