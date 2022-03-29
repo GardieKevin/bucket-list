@@ -1,0 +1,64 @@
+.header {
+    background-color: #ffdac2;
+    font-family: Bradley Hand ITC;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+html {
+    padding-bottom: 50px;
+    min-height: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    position: relative;
+}
+
+.body {
+    background-color: antiquewhite;
+    font-family: Arial Narrow;
+    height: 100%;
+    margin: 0;
+}
+
+.logo {
+    padding-right: 25px;
+}
+
+.nav {
+    background-color:  #ffdac2;
+    font-family: Bradley Hand ITC;
+    font-weight: bold ;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.nav_item {
+    padding-left: 25px;
+    padding-right: 25px;
+    text-decoration: none;
+    font-size: xx-large;
+    color: saddlebrown;
+}
+.nav_item:hover {
+    color: forestgreen;
+    transition-duration: 0.6s;
+}
+
+.footer {
+    background-color: #ffdac2;
+    font-family: Bradley Hand ITC;
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+}
