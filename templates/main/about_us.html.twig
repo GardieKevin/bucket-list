@@ -1,5 +1,75 @@
 {% extends 'base.html.twig' %}
 
-{% block contenu_about_us %}
-    <h1>A propos de nous</h1>
+{% block contenu %}
+    <h1>Team members</h1>
+
+    <section class="team-member">
+        {% for auteur in tableau %}
+            <article class="member">
+                <a href="{{ auteur.link }}" title="Lien html avec image">
+                    <img class="member-portrait" height="200" src='{{ auteur.picture }}' alt="{{ auteur.lastname }}"/>
+                </a>
+                <div class="member-text">
+                    <h3 class="member-name">
+                        {{ auteur.firstname }}
+                        {{ auteur.lastname }}
+                        {% if(auteur.firstname == 'Fabien') %}
+                            &hearts;
+                        {% endif %}
+                        <!--Ternaire-->
+                        {{ auteur.firstname == 'Fabien' ? "&#128151" : "" }}
+                    </h3>
+                    <p>
+                        Date de naissance :
+                        {{ auteur.dateOfBirth | date("d-m-Y") }}
+                    </p>
+                    <p>
+                        {{ auteur.description }}
+                    </p>
+                </div>
+            </article>
+        {% endfor %}
+    </section>
+    <style>
+        img:hover {
+            animation: shake 0.5s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes shake {
+            0% {
+                transform: translate(1px, 1px) rotate(0deg);
+            }
+            10% {
+                transform: translate(-1px, -2px) rotate(-1deg);
+            }
+            20% {
+                transform: translate(-3px, 0px) rotate(1deg);
+            }
+            30% {
+                transform: translate(3px, 2px) rotate(0deg);
+            }
+            40% {
+                transform: translate(1px, -1px) rotate(1deg);
+            }
+            50% {
+                transform: translate(-1px, 2px) rotate(-1deg);
+            }
+            60% {
+                transform: translate(-3px, 1px) rotate(0deg);
+            }
+            70% {
+                transform: translate(3px, 1px) rotate(-1deg);
+            }
+            80% {
+                transform: translate(-1px, -1px) rotate(1deg);
+            }
+            90% {
+                transform: translate(1px, 2px) rotate(0deg);
+            }
+            100% {
+                transform: translate(1px, -2px) rotate(-1deg);
+            }
+        }
+    </style>
 {% endblock %}

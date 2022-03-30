@@ -1,5 +1,14 @@
 {% extends 'base.html.twig' %}
 
-{% block contenu_list %}
-    <h1>Wishes list</h1>
+{% block contenu %}
+    <h1 class="idea-title">Wishes list</h1>
+    <section>
+        {% for wish in wishes %}
+            <article class="idea">
+                <a class="idea-link" href="{{ path('wish_detail', {'id': wish.id}) }}">
+                    {{ wish.title }}
+                </a>
+            </article>
+        {% endfor %}
+    </section>
 {% endblock %}

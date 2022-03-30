@@ -15,6 +15,9 @@ class MainController extends AbstractController
 
     #[Route('/bucket/about_us', name: "bucket_about")]
     public function about(){
-        return $this->render('main/about_us.html.twig');
+        $auteurs = file_get_contents("../data/team.json");
+        $tableau = json_decode($auteurs, true);
+        return $this->render('main/about_us.html.twig',
+            compact("tableau"));
     }
 }

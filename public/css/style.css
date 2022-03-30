@@ -1,6 +1,6 @@
 .header {
     background-color: #ffdac2;
-    font-family: Bradley Hand ITC;
+    font-family: fantasy;
     display: flex;
     justify-content: center;
     padding-top: 15px;
@@ -20,6 +20,8 @@ html {
     font-family: Arial Narrow;
     height: 100%;
     margin: 0;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .logo {
@@ -27,38 +29,94 @@ html {
 }
 
 .nav {
-    background-color:  #ffdac2;
+    background-color: #ffdac2;
     font-family: Bradley Hand ITC;
-    font-weight: bold ;
+    font-weight: bold;
     margin-bottom: 0px;
     margin-top: 0px;
     padding-bottom: 10px;
+    padding-left: 100px;
     display: flex;
     justify-content: flex-end;
 
 }
-
-.nav_item {
-    padding-left: 25px;
-    padding-right: 25px;
-    text-decoration: none;
-    font-size: x-large;
-    color: saddlebrown;
-}
-.nav_item:hover {
-    color: forestgreen;
-    transition-duration: 0.6s;
-}
+    .nav_item {
+        padding-left: 25px;
+        padding-right: 25px;
+        text-decoration: none;
+        font-size: x-large;
+        color: saddlebrown;
+    }
+    .nav_item:hover {
+        color: forestgreen;
+        transition-duration: 0.6s;
+    }
 
 .footer {
     background-color: #ffdac2;
-    font-family: Bradley Hand ITC;
-    font-size: larger;
+    font-family: fantasy;
+    font-size: medium;
     display: flex;
     justify-content: center;
     position: absolute;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: 100px;
+    right: 100px;
     height: 50px;
+
 }
+
+.wish_container {
+    font-family: Bradley Hand ITC;
+    font-weight: bold;
+}
+    .wish_item {
+        font-size: medium;
+    }
+
+.member-portrait{
+    border-style: solid;
+    border-color: black;
+    border-radius: 40%;
+    margin-right: 30px;
+}
+    .member{
+        display: flex;
+        padding-bottom: 35px;
+        padding-top: 35px;
+    }
+        .member-name{
+            font-style: italic;
+            font-family: Corbel;
+        }
+
+.idea-title{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+    .idea{
+        font-size: x-large;
+        font-family: Corbel;
+        padding-bottom: 25px;
+    }
+        .idea-link{
+            text-decoration: none;
+            color: black;
+        }
+        .idea-link:hover {
+            color: forestgreen;
+            transition-duration: 0.6s;
+        }
+
+.div{
+    display: flex;
+    justify-content: center;
+
+}
+    .image{
+        padding-top: 25px;
+        padding-bottom: 25px;
+        border-radius: 20%;
+    }

@@ -1,5 +1,21 @@
 {% extends 'base.html.twig' %}
 
-{% block contenu_detail %}
-    <h1>Détail du souhait x</h1>
+{% block contenu %}
+
+    <h1 class="idea-title">{{ wish.title }}</h1>
+
+    <h2 class="idea-author"> Créé par {{ wish.author }} </h2>
+
+    <p> Le {{ wish.dateCreated | date('d/m/Y') }}</p>
+
+    <div class="div">
+        {% if(wish.title == 'Machu Pichu walk') %}
+            <img class="image" height="250" src="https://media.sudouest.fr/2085512/1000x500/so-5e1ea88f66a4bd8248ae5f26-ph0.jpg?v=1579068017">
+        {% endif %}
+    </div>
+
+    <h3 class="idea-description">Description de l'idée:</h3>
+
+    <p>{{ wish.description | nl2br }}</p>
+
 {% endblock %}
