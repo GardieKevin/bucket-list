@@ -6,8 +6,13 @@
         {% for wish in wishes %}
             <article class="idea">
                 <a class="idea-link" href="{{ path('wish_detail', {'id': wish.id}) }}">
-                    {{ wish.title }}
+                    {{ wish.title }} - {{ wish.categories.name }}
                 </a>
+                <div>
+                    {% for categorie in wish.categories %}
+                        <div>{{ categorie.name }}</div>
+                    {% endfor %}
+                </div>
             </article>
         {% endfor %}
     </section>

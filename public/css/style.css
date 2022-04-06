@@ -1,8 +1,10 @@
+
 .header {
     background-color: #ffdac2;
     font-family: fantasy;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-left: 30px;
     padding-top: 15px;
     padding-bottom: 10px;
 }
@@ -17,7 +19,7 @@ html {
 
 .body {
     background-color: antiquewhite;
-    font-family: Arial Narrow;
+    font-family: Arial Narrow, serif;
     height: 100%;
     margin: 0;
     padding-left: 100px;
@@ -30,11 +32,11 @@ html {
 
 .nav {
     background-color: #ffdac2;
-    font-family: Bradley Hand ITC;
+    font-family: Bradley Hand ITC, serif;
     font-weight: bold;
     margin-bottom: 0px;
     margin-top: 0px;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
     padding-left: 100px;
     display: flex;
     justify-content: flex-end;
@@ -67,7 +69,7 @@ html {
 }
 
 .wish_container {
-    font-family: Bradley Hand ITC;
+    font-family: Bradley Hand ITC, serif;
     font-weight: bold;
 }
     .wish_item {
@@ -87,18 +89,19 @@ html {
     }
         .member-name{
             font-style: italic;
-            font-family: Corbel;
+            font-family: Corbel, serif;
         }
 
 .idea-title{
     display: flex;
     justify-content: center;
-    padding-top: 30px;
-    padding-bottom: 20px;
+    padding-top: 70px;
+    padding-bottom: 50px;
+    font-family: Distant-Galaxy;
 }
     .idea{
         font-size: x-large;
-        font-family: Corbel;
+        font-family: Corbel, serif;
         padding-bottom: 25px;
     }
         .idea-link{
@@ -119,4 +122,13 @@ html {
         padding-top: 25px;
         padding-bottom: 25px;
         border-radius: 20%;
+    }
+.add-wish{
+    padding-left: 300px;
+    padding-right: 300px;
+}
+    .add-wish-button{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
     }

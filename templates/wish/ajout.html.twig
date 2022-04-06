@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block contenu %}
+
+    <div  class="idea-title">
+        <h1>Let's wish!</h1>
+    </div>
+
+    <div class="add-wish">
+        {{ form_start(monFormulaire) }}
+        {{ form_widget(monFormulaire) }}
+        <button class="add-wish-button">Soumettre</button>
+        {{ form_end(monFormulaire) }}
+    </div>
+
+{% endblock %}

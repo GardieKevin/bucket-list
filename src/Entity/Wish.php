@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\WishRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: WishRepository::class)]
 class Wish
@@ -14,12 +15,18 @@ class Wish
     private $id;
 
     #[ORM\Column(type: 'string', length: 255)]
+    #[Assert\NotBlank]
+    #[Assert\Length(min:2, max: 255, minMessage: "Le nombre de caractères minimum est de 2 !" ,maxMessage: 'le nombre de caractères est de 255 maximum!')]
     private $title;
 
     #[ORM\Column(type: 'string', length: 255)]
+    #[Assert\NotBlank]
+    #[Assert\Length(min:5, max: 255, minMessage: "Le nombre de caractères minimum est de 5 !" ,maxMessage: 'le nombre de caractères est de 255 maximum!')]
     private $description;
 
     #[ORM\Column(type: 'string', length: 50)]
+    #[Assert\NotBlank]
+    #[Assert\Length(min:2, max: 50, minMessage: "Le nombre de caractères minimum est de 2 !" ,maxMessage: 'le nombre de caractères est de 50 maximum!')]
     private $author;
 
     #[ORM\Column(type: 'boolean')]
@@ -27,6 +34,10 @@ class Wish
 
     #[ORM\Column(type: 'datetime')]
     private $dateCreated;
+
+    #[ORM\ManyToOne(targetEntity: Category::class, inversedBy: 'wishes')]
+    #[ORM\JoinColumn(nullable: false)]
+    private $categories;
 
     public function getId(): ?int
     {
@@ -89,6 +100,18 @@ class Wish
     public function setDateCreated(\DateTimeInterface $dateCreated): self
     {
         $this->dateCreated = $dateCreated;
+
+        return $this;
+    }
+
+    public function getCategories(): ?Category
+    {
+        return $this->categories;
+    }
+
+    public function setCategories(?Category $categories): self
+    {
+        $this->categories = $categories;
 
         return $this;
     }
